@@ -1,0 +1,15 @@
+<h1 class="header-text">Sign In</h1>
+
+<form class="form-standard" action="/auth/sign_in" method="POST">
+    {{#if auth_error}}
+        <p class="auth-error">{{auth_error}}</p>
+    {{/if}}
+    <input name="email" type="email" placeholder="Enter your email" required>
+    <input name="username" type="username" placeholder="Enter your username" required>
+    <input name="password" type="password" placeholder="Enter your password">
+
+
+    <button>Submit</button>
+
+
+</form>
