@@ -1,15 +1,16 @@
-<h1 class="header-text">Sign In</h1>
+<a href="/">Go Back</a>
+
+<h1 class="header-text">Sign In!</h1>
 
 <form class="form-standard" action="/auth/sign_in" method="POST">
-    {{#if auth_error}}
-        <p class="auth-error">{{auth_error}}</p>
-    {{/if}}
+    {{#each auth_errors}}
+    <p class="auth-error">{{this}}</p>
+    {{/each}}
+
     <input name="email" type="email" placeholder="Enter your email" required>
-    <input name="username" type="username" placeholder="Enter your username" required>
+    {{!-- <input name="username" type="username" placeholder="Enter your username" required> --}}
     <input name="password" type="password" placeholder="Enter your password">
 
-
     <button>Submit</button>
-
 
 </form>
