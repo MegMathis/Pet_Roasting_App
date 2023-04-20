@@ -1,1 +1,48 @@
+:root {
+    --primary_color1: #FBFBF8; /* Baby Powder */
+    --primary_color1: #B37034; /* Copper */
+    --primary_color1: #6B2F17; /* Seal Brown */
+    --primary_color1: #452D2E; /* Van Dyke */
+    --primary_color1: #B04916; /* Rust */
+    --primary_color1: #F8AF01; /* Xanthous */
+    --primary_color1: #F8E7CE; /* Champagne */
+    --primary_color1: #FDFDFE; /* White */
+    --primary_color1: #2F161A; /* Licorice */
+}
+
+*{
+    color: #2F161A;
+}
+
+#home-page{
+    background-color: #f8e7ce;
+}
+
+#home-nav{
+    background-color: #B04916;
+}
+
+#home-nav span{
+    color: white;
+}
+
+#home-nav a {
+    color: white;
+}
+
+#home-nav img {
+    border-radius: 50%;
+}
+
+.button {
+    color: white;
+    background-color: #F8AF01;
+}
+
+#sign-border {
+    border: solid #B04916 5px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
 
