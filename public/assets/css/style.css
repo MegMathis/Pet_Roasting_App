@@ -1,12 +1,3 @@
-/* Setting Background Color For DashBoard*/
 *{
-  background-color: orange;
+    color: blueviolet;
 }
-
-
-
-
-
-.auth-error {
-    color: red;
-  }
