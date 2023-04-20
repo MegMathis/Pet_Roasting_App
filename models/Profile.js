@@ -1,5 +1,6 @@
 const { Model, DataTypes } = require("sequelize");
 const db = require("../config/connection");
+const User = require("./User");
 
 class Profile extends Model {}
 
@@ -21,11 +22,24 @@ Profile.init(
         len: [1, 500],
       },
     },
+    // maybe add this?
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "user",
+        key: "id",
+      },
+    },
   },
   {
     sequelize: db,
     modelName: "profile",
   }
 );
+
+// each profile has one user
+Profile.hasOne(User, {
+  foreignKey: "user_id",
+});
 
 module.exports = Profile;

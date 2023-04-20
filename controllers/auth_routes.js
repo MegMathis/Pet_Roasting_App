@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User } = require("../models");
+const { User, Profile } = require("../models");
 
 // log user in
 router.post("/auth/sign_in", async (req, res) => {
@@ -7,12 +7,12 @@ router.post("/auth/sign_in", async (req, res) => {
 
   const user = await User.findOne({
     where: {
-      email: user_data.email
+      email: user_data.email,
     },
   });
   if (!user) {
     req.session.auth_errors = [
-      'Account not found with that email.  Please Sign Up',
+      "Account not found with that email.  Please Sign Up",
     ];
     return res.redirect("/sign_up");
   }
@@ -32,14 +32,14 @@ router.post("/auth/sign_in", async (req, res) => {
 
 //get route for dashboard
 router.get("/dashboard", async (req, res) => {
-  if (!req.session.user_id){
-    return res.redirect("/sign_in")
+  if (!req.session.user_id) {
+    return res.redirect("/sign_in");
   }
-  const user = await User.findByPk(req.session.user_id)
+  const user = await User.findByPk(req.session.user_id);
   res.render("private/dashboard", {
-    email: user.email
-  })
-})
+    email: user.email,
+  });
+});
 
 // register user
 router.post("/auth/sign_up", async (req, res) => {
@@ -56,20 +56,24 @@ router.post("/auth/sign_up", async (req, res) => {
     // check to see where we want to redirect user
     res.redirect("/dashboard");
   } catch (err) {
-    const errors = err.errors.map(errObj => errObj.message);
+    const errors = err.errors.map((errObj) => errObj.message);
 
     req.session.auth_errors = errors;
-    console.log(err)
-    res.redirect('/sign_up')
-
-
+    console.log(err);
+    res.redirect("/sign_up");
   }
 });
 
+//logout button
 router.get("/auth/logout", (req, res) => {
   req.session.destroy();
 
   res.redirect("/");
+});
+
+//profile page route
+router.get("/profile", async (req, res) => {
+  res.send("Test");
 });
 
 module.exports = router;
