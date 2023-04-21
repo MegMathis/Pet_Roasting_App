@@ -31,8 +31,14 @@ body {
     width: 100%;      
 }
 
+
+
 #james-section p {
     max-width: 300px;
+}
+
+#get-started{
+    
 }
 
 #home-nav{
@@ -61,6 +67,7 @@ body {
     padding: 20px;
     border-radius: 5px;
     max-width: fit-content;
+    margin-bottom: 40px;
 }
 
 #sign-border border {

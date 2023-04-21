@@ -1,6 +1,6 @@
 const { Model, DataTypes } = require("sequelize");
 const db = require("../config/connection");
-const User = require("./User");
+const { User } = require("./index.js");
 
 class Profile extends Model {}
 
@@ -34,12 +34,11 @@ Profile.init(
   {
     sequelize: db,
     modelName: "profile",
+    freezeTableName: true
   }
 );
 
 // each profile has one user
-Profile.hasOne(User, {
-  foreignKey: "user_id",
-});
+
 
 module.exports = Profile;
