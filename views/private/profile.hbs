@@ -1,14 +1,25 @@
-<div id="profile-image">
-    <h1>Upload Image</h1>
+<nav id='home-nav' class=" navbar mb-5">
+    <div class="d-flex justify-content-start">
+      <a class="navbar-brand " href="/">
+        <span class="navbar-text text-center">Canine Critique</span>
+        <img src="/assets/images/pet_roasting_logo.png" width="30" height="30" alt="Logo">
+      </a>
+    </div>
+
+    </div>
+  </nav>
+
+<a href="javascript:window.history.go(-1)" class="btn btn-primary">Dashboard</a>
+
+<div class="d-flex justify-content-center">
+  <div class="container">
+    <div id="profile-pic">
     <form method="POST" action="/profile/uploads" enctype="multipart/form-data">
         <input type="file" src="ProfilePics">
         <input type="submit">
     </form>
-</div>
-
-<h2>{{username}}</h2>
-
-<div id="profile-bio">
-    <h3>Bio</h3>
-    <p>{{bio}}</p>
+    </div>
+    <h1>Username : {{username}}</h1>
+    <p>Bio : {{bio}}</p>
+  </div>
 </div>

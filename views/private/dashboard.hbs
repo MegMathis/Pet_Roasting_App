@@ -1,10 +1,35 @@
+<div id="dashboard">
+<nav id='home-nav' class=" navbar ">
+    <div class="d-flex justify-content-start">
+      <a class="navbar-brand " href="/">
+        <span class="navbar-text text-center">Canine Critique</span>
+        <img src="/assets/images/pet_roasting_logo.png" width="30" height="30" alt="Logo">
+      </a>
+    </div>
+</nav>
+
 {{!-- <h1>Featured Dogs</h1> --}}
-<h1>Dashboard</h1>
+<section id="welcome-info">
+    <div class="row">
+        <div class="col-7">
+            <h1>Dashboard</h1>
+            <h4>Welcome, {{username}}!</h4> 
+        </div>
+        <div class="col-5 text-right mt-1">
+            <a href="/auth/logout" class="btn btn-primary">Log Out</a>
+            <a href="/profile" class="btn btn-primary">Profile</a>
+        </div>
+    </div>
+</section>
 
-<h3>Welcome, {{email}}</h3>
 
+<section id="image-feed" class="text-center mb-2">
+    <img src="/assets/images/nataliesdog.jpg" alt="dog" width="300" height="300">
+</section>
 
+<div id="navbuttons" class="d-flex justify-content-center mt-4">
+    <a href="" class="btn mr-1 btn-primary">Previous</a>
+    <a href="" class="btn btn-primary">Next</a>
+</div>
 
-<a href="/auth/logout">Log Out</a>
-
-<a href="/profile">Profile</a>
+</div>
