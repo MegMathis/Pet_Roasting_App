@@ -72,8 +72,8 @@ router.get("/auth/logout", (req, res) => {
 });
 
 //profile page route
-router.get("/profile", async (req, res) => {
-  res.send("Test");
-});
+// router.get("/profile", async (req, res) => {
+//   res.send("Test");
+// });
 
 module.exports = router;
