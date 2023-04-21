@@ -1,3 +1,7 @@
+body {
+    height: 100vh;
+}
+
 :root {
     --primary_color1: #FBFBF8; /* Baby Powder */
     --primary_color1: #B37034; /* Copper */
@@ -14,8 +18,20 @@
     color: #2F161A;
 }
 
-#home-page{
-    background-color: #f8e7ce;
+#sign-in-page footer{ 
+        position: absolute;
+        bottom: 0;
+        width: 100%;      
+}
+
+#sign-up-page footer{ 
+    position: absolute;
+    bottom: 0;
+    width: 100%;      
+}
+
+#james-section p {
+    max-width: 300px;
 }
 
 #home-nav{
@@ -40,9 +56,116 @@
 }
 
 #sign-border {
-    border: solid #B04916 5px;
+    border: solid rgba(176, 73, 22, .7) 5px;
     padding: 20px;
     border-radius: 5px;
+    max-width: fit-content;
+}
+
+#sign-border border {
+    opacity: 50%;
+}
+
+#james-section img {
+    border-radius: 50%;
+}
+
+#james-links a {
+    color: #B04916;
+    
+}
+
+#james-section p {
+    max-width: 300px;
+}
+
+#megs-section img {
+    border-radius: 50%;
+}
+
+#megs-links a {
+    color: #B04916;
+    
+}
+
+#megs-section p {
+    max-width: 300px;
+}
+
+#jeffs-section img {
+    border-radius: 50%;
+}
+
+#jeffs-links a {
+    color: #B04916;
+    
+}
+
+#jeffs-section p {
+    max-width: 300px;
+}
+
+#natalies-section img {
+    border-radius: 50%;
+    margin-bottom: 40px;
+}
+
+#natalies-links a {
+    color: #B04916;
+    
+}
+
+#natalies-section p {
+    max-width: 300px;
+}
+
+#disclaimer {
+    margin-bottom: 50px;
+}
+
+/* footer */
+#app-footer {
+    background-color: #2F161A;
+}
+
+#app-footer h1 {
+    color: #F8E7CE;
+    font-size: 25px;
+}
+
+#app-footer img {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+}
+
+#app-footer a {
+    color: #F8E7CE;
+}
+
+#app-footer a:hover{
+    color: #B04916;
+}
+
+#sign-in-page .button {
+    background-color: #F8AF01;
+}
+
+#sign-up-page .button {
+    background-color: #F8AF01;
 }
 
 
+
+* hr{
+    display:block;
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), 
+    color-stop(50%, #B04916));
+    height: 7px;
+    border: none;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-bottom: 40px;
+}
