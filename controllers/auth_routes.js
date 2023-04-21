@@ -73,16 +73,8 @@ router.get("/auth/logout", (req, res) => {
 
 //profile page route
 // router.get("/profile", async (req, res) => {
-//   res.render("private/profile", {
-//     username: user.username,
-//   });
+//   res.send("Test");
 // });
-
-
-// app.post('/profile', upload.single('avatar'), function (req, res, next) {
-// })
-
-
 
 
 module.exports = router;

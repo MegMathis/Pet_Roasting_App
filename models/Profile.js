@@ -34,11 +34,8 @@ Profile.init(
   {
     sequelize: db,
     modelName: "profile",
-    freezeTableName: true
+    freezeTableName: true,
   }
 );
-
-// each profile has one user
-
 
 module.exports = Profile;

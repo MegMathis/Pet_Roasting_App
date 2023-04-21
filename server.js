@@ -10,6 +10,7 @@ const db = require("./config/connection");
 //pulling in the route files
 const public_routes = require("./controllers/public_routes");
 const auth_routes = require("./controllers/auth_routes");
+const comment_routes = require("./controllers/comment_routes");
 //requiring session framework
 const session = require("express-session");
 const path = require("path");
@@ -59,7 +60,7 @@ app.use(
   })
 );
 //loadign all routes at root
-app.use("/", [public_routes, auth_routes]);
+app.use("/", [public_routes, auth_routes, comment_routes]);
 
 // change file ext from .handlebars to .hbs
 
