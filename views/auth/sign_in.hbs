@@ -1,15 +1,41 @@
-<a href="/">Go Back</a>
+<section id="sign-in-page">
+    <nav id='home-nav' class=" navbar mb-5">
+    <div class="d-flex justify-content-start">
+      <a class="navbar-brand " href="/">
+        <span class="navbar-text text-center">Canine Critique</span>
+        <img src="/assets/images/pet_roasting_logo.png" width="30" height="30" alt="Logo">
+      </a>
+    </div>
 
-<h1 class="header-text">Sign In!</h1>
+    </div>
+  </nav>
 
-<form class="form-standard" action="/auth/sign_in" method="POST">
-    {{#each auth_errors}}
-    <p class="auth-error">{{this}}</p>
-    {{/each}}
+<div class="d-flex justify-content-center mb-4 ">
+    <div class="text-center">
+        <h1 class="mb-4">Sign Into Your Account!</h1>
+        <form class="form-standard text" action="/auth/sign_in" method="POST">
+            {{#each auth_errors}}
+            <p class="auth-error">{{this}}</p>
+            {{/each}}
+            <div class="form-group mx-auto" style="width: 250px;">
+                <input name="email" type="email" placeholder="Enter your email" class="form-control" required>
+            </div>
+            <div class="form-group mx-auto" style="width: 250px;">
+                <input name="password" type="password" placeholder="Enter your password" class="form-control">
+            </div>
+              <a href="/" class="btn button ">Back</a>
+            <button type="submit" class=" btn button  justify-item-center">Sign In</button>
+        </form>
+    </div>
+</div>
 
-    <input name="email" type="email" placeholder="Enter your email" required>
-    <input name="password" type="password" placeholder="Enter your password">
+ <footer id='app-footer' class="container-fluid py-3">
+    <div class="row">
+      <div class="col-md-4 d-flex ml-1">
+        <img src="/assets/images/pet_roasting_logo.png" class="img-fluid" alt="company logo">
+        <h1 class="ml-2">Canine Critique</h1>
+      </div>
+    </div>
+  </footer>
+</section>
 
-    <button>Submit</button>
-
-</form>
