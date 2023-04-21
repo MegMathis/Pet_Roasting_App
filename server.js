@@ -16,6 +16,7 @@ const session = require("express-session");
 const path = require("path");
 const multer = require("multer");
 
+
 //creating a new instance of express
 const app = express();
 
@@ -47,6 +48,12 @@ app.set("view engine", "hbs");
 app.set("views", "./views");
 app.use(
   session({
+    cookie: {
+      maxAge: 1872000,
+      httpOnly: true,
+      secure: false,
+      sameSite: 'strict',
+    },
     secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: true,

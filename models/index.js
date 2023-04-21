@@ -3,6 +3,7 @@ const Profile = require("./Profile");
 const User = require("./User");
 const Comment = require("./Comment");
 
+
 User.hasOne(Profile, {
   foreignKey: "user_id",
 });
@@ -17,3 +18,4 @@ module.exports = {
   User,
   Comment,
 };
+

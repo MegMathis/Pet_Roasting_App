@@ -37,7 +37,7 @@ router.get("/dashboard", async (req, res) => {
   }
   const user = await User.findByPk(req.session.user_id);
   res.render("private/dashboard", {
-    email: user.email,
+    username: user.username,
   });
 });
 
@@ -56,7 +56,7 @@ router.post("/auth/sign_up", async (req, res) => {
     // check to see where we want to redirect user
     res.redirect("/dashboard");
   } catch (err) {
-    const errors = err.errors.map((errObj) => errObj.message);
+    const errors = err && err.errors ? err.errors.map((errObj) => errObj.message) : [];
 
     req.session.auth_errors = errors;
     console.log(err);
@@ -76,4 +76,8 @@ router.get("/auth/logout", (req, res) => {
 //   res.send("Test");
 // });
 
+
 module.exports = router;
+
+
+
