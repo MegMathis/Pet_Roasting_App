@@ -14,13 +14,13 @@
     <form action="/posts/new" method="post">
       <legend>New Post</legend>
       <div class="form-group">
-        <label for="post-title">Title</label>
+        <label for="post-title"><Caption></Caption></label>
         <input
           type="text"
-          name="title"
+          name="caption"
           class="form-control"
-          id="post-title"
-          placeholder="Title"
+          id="post-caption"
+          placeholder="Caption"
         />
       </div>
       <div class="form-group">
@@ -33,7 +33,7 @@
           placeholder="https://www.google.com"
         />
       </div>
-      <div class="form-group">
+      {{!-- <div class="form-group">
         <label for="post-summary">Summary</label>
         <textarea
           name="summary"
@@ -41,7 +41,7 @@
           id="post-summary"
           placeholder="Summary"
         ></textarea>
-      </div>
+      </div>--}}
       <div class="text-right">
         <button type="submit" class="btn btn-primary">Create Post</button>
       </div>
