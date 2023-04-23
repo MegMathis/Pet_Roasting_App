@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const { User, Profile } = require("../models");
 
+
 // log user in
 router.post("/auth/sign_in", async (req, res) => {
   const user_data = req.body;
@@ -38,6 +39,7 @@ router.get("/dashboard", async (req, res) => {
   const user = await User.findByPk(req.session.user_id);
   res.render("private/dashboard", {
     username: user.username,
+
   });
 });
 

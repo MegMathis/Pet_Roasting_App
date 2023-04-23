@@ -5,15 +5,22 @@ class Comment extends Model {}
 
 Comment.init(
   {
-    body: {
+    text: {
       type: DataTypes.STRING,
       allowNull: false,
     },
+    id: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      primaryKey: true,
+    }
   },
   {
     sequelize: db,
     modelName: "comment",
   }
 );
+
+Comment.sync();
 
 module.exports = Comment;
