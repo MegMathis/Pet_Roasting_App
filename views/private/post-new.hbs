@@ -1,0 +1,50 @@
+<div id="dashboard">
+<nav id='home-nav' class=" navbar ">
+    <div class="d-flex justify-content-start">
+      <a class="navbar-brand " href="/">
+        <span class="navbar-text text-center">Canine Critique</span>
+        <img src="/assets/images/pet_roasting_logo.png" width="30" height="30" alt="Logo">
+      </a>
+    </div>
+    <a href="/posts/new" class="btn btn-primary navbar-btn">New Post</a>
+</nav>
+
+<div class="row">
+  <div class="col-sm-4 col-sm-offset-4">
+    <form action="/posts/new" method="post">
+      <legend>New Post</legend>
+      <div class="form-group">
+        <label for="post-title">Title</label>
+        <input
+          type="text"
+          name="title"
+          class="form-control"
+          id="post-title"
+          placeholder="Title"
+        />
+      </div>
+      <div class="form-group">
+        <label for="post-url">Url</label>
+        <input
+          type="url"
+          name="url"
+          class="form-control"
+          id="post-url"
+          placeholder="https://www.google.com"
+        />
+      </div>
+      <div class="form-group">
+        <label for="post-summary">Summary</label>
+        <textarea
+          name="summary"
+          class="form-control"
+          id="post-summary"
+          placeholder="Summary"
+        ></textarea>
+      </div>
+      <div class="text-right">
+        <button type="submit" class="btn btn-primary">Create Post</button>
+      </div>
+    </form>
+  </div>
+</div>

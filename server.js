@@ -10,11 +10,12 @@ const db = require("./config/connection");
 //pulling in the route files
 const public_routes = require("./controllers/public_routes");
 const auth_routes = require("./controllers/auth_routes");
-const comment_routes = require("./controllers/comment_routes");
+const post_routes = require("./controllers/post_routes");
 //requiring session framework
 const session = require("express-session");
 const path = require("path");
 const multer = require("multer");
+const validator = require("express-validator");
 
 
 //creating a new instance of express
@@ -23,7 +24,7 @@ const app = express();
 //configuring middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, 'public')));
 
 //Multer Code For Image Upload
 const storage = multer.diskStorage({
@@ -60,7 +61,7 @@ app.use(
   })
 );
 //loadign all routes at root
-app.use("/", [public_routes, auth_routes, comment_routes]);
+app.use("/", [public_routes, auth_routes, post_routes]);
 
 // change file ext from .handlebars to .hbs
 
