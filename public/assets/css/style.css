@@ -41,10 +41,6 @@ body {
     max-width: 300px;
 }
 
-#get-started{
-    
-}
-
 #home-nav{
     background-color: #B04916;
 }
@@ -199,4 +195,25 @@ body {
     width: 100%;
     background-size: cover;
     background-position: center;
+}
+
+.user-posts h2 {
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+#welcome-info a  {
+    background-color: #F8AF01;
+}
+
+.postFrame button {
+    background-color: #F8AF01;
+}
+
+#dashboard-page .button {
+    background-color: #F8AF01;
+}
+
+.form-group a {
+    color: #F8AF01;
 }

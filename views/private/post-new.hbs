@@ -6,26 +6,28 @@
         <img src="/assets/images/pet_roasting_logo.png" width="30" height="30" alt="Logo">
       </a>
     </div>
-    <a href="/posts/new" class="btn btn-primary navbar-btn">New Post</a>
   </nav>
 
-<div class="row">
+
+<div id='newpost' class=" d-flex align-items-center justify-content-center mt-5">
   <div class="col-sm-4 col-sm-offset-4 text-center">
-    <form action="/posts/new" method="post">
-      <legend>New Post</legend>
-      <div class="form-group">
-        <label for="post-title">
-          <Caption>Enter a Caption for your Post!</Caption>
-        </label>
-        <input type="text" name="caption" class="form-control" id="post-caption" placeholder="Caption" />
-      </div>
-      <div class="form-group">
-        <label for="post-url">Enter the URL of your <a href="https://giphy.com">Giphy.com</a> Image!</label>
-        <input type="url" name="url" class="form-control" id="post-url" placeholder="https://www.google.com" />
-      </div>
-      <div class="text-right">
-        <button type="submit" class="btn btn-primary">Create Post</button>
-      </div>
-    </form>
+    <div class="text-center">
+      <form action="/posts/new" method="post">
+        <legend>New Post</legend>
+        <div class="form-group">
+          <label for="post-title">
+            <Caption>Enter a Caption for your Post!</Caption>
+          </label>
+          <input type="text" name="caption" class="form-control" id="post-caption" placeholder="ex: da dawg got hella fat" />
+        </div>
+        <div class="form-group">
+          <label for="post-url">Enter the URL of your <a href="https://giphy.com/search/dog" target="_blank" >Giphy.com</a> Image!</label>
+          <input type="url" name="url" class="form-control" id="post-url" placeholder="link goes here!" />
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn button">Create Post</button>
+        </div>
+      </form>
+    </div>
   </div>
 </div>
