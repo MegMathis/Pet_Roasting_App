@@ -14,7 +14,7 @@
         <div class="row">
             <div class="col-7">
                 <h1>Dashboard</h1>
-                <h4>Welcome, {{username}}!</h4>
+                <h4>Welcome, {{user.username}}!</h4>
             </div>
             <div class="col-5 text-right mt-1">
                 <a href="/auth/logout" class="btn btn-primary">Log Out</a>
@@ -23,8 +23,19 @@
         </div>
     </section>
 
-    <p>The result is: {{result}}</p>
-    {{caption}}
-    {{url}}
+    {{#if user.posts}}
+        <div class="posts">
+            {{#each user.posts as | post |}}
+                <div class="post">
+                    <div class="post-image" style="background-image: url({{post.url}})"></div>
+                    <h3>{{post.caption}}</h3>
+                    <a href="/dashboard/posts/{{post.id}}">View Post</a>
+                </div>
+            {{/each}}
+        </div>
+    {{else}}
+        <p>No posts have been added.</p>
+    {{/if}}
+</div>
 
     

@@ -2,7 +2,9 @@ const router = require("express").Router();
 
 // Renders Homepage View
 router.get("/", async (req, res) => {
-  const home = await res.render("index");
+  if (req.session.user_id) return res.redirect("/dashboard");
+
+  res.render("index");
 });
 
 // Redirects logged in user to dashboard

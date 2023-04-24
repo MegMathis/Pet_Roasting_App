@@ -181,3 +181,22 @@ body {
     border-bottom-right-radius: 5px;
     margin-bottom: 40px;
 }
+
+.posts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post .post-image {
+    height: 150px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
