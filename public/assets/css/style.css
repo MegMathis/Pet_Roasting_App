@@ -3,6 +3,10 @@ body {
     height: 100vh;
 }
 
+#tab-logo{
+    border-radius: 50%;
+}
+
 :root {
     --primary_color1: #FBFBF8; /* Baby Powder */
     --primary_color1: #B37034; /* Copper */
