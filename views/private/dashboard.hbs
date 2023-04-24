@@ -1,3 +1,4 @@
+<section id="dashboard-page">
 <div id="dashboard">
     <nav id='home-nav' class=" navbar ">
         <div class="d-flex justify-content-start">
@@ -6,36 +7,38 @@
                 <img src="/assets/images/pet_roasting_logo.png" width="30" height="30" alt="Logo">
             </a>
         </div>
-        <a href="/posts/new" class="btn btn-primary navbar-btn">New Post</a>
+        <a href="/auth/logout" class="btn button">Log Out</a>
     </nav>
 
     {{!-- <h1>Featured Dogs</h1> --}}
     <section id="welcome-info">
-        <div class="row">
-            <div class="col-7">
+        <div class="row ml-5">
+            <div class=" ml-1 col-6">
                 <h1>Dashboard</h1>
                 <h4>Welcome, {{user.username}}!</h4>
             </div>
-            <div class="col-5 text-right mt-1">
-                <a href="/auth/logout" class="btn btn-primary">Log Out</a>
-                <a href="/profile" class="btn btn-primary">Profile</a>
+            <div class="col-5 text-right mt-4">
+                <a href="/posts/new" class="btn button">New Post</a>
             </div>
         </div>
     </section>
 
+<div class="user-posts">
+    <h2 class="text-center text-decoration-underline">Your Posts</h2>
     {{#if user.posts}}
-        <div class="posts">
+        <div class="posts" style="display: flex; flex-direction: column; align-items: center;">
             {{#each user.posts as | post |}}
-                <div class="post">
-                    <div class="post-image" style="background-image: url({{post.url}})"></div>
+                <div class="post" style="margin-bottom: 1rem;">
+                    <div class="post-image mb-4" style="background-image: url({{post.url}}); width: 400px; height: 400px;"></div>
                     <h3>{{post.caption}}</h3>
                     <a href="/dashboard/posts/{{post.id}}">View Post</a>
                 </div>
             {{/each}}
         </div>
     {{else}}
-        <p>No posts have been added.</p>
+        <p class="text-center">No posts have been added.</p>
     {{/if}}
 </div>
+</section>
 
     

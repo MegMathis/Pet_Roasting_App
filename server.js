@@ -50,7 +50,7 @@ app.set("views", "./views");
 app.use(
   session({
     cookie: {
-      maxAge: 1872000,
+      maxAge: 300000,
       httpOnly: true,
       secure: false,
       sameSite: 'strict',
