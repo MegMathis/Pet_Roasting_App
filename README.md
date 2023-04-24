@@ -38,16 +38,39 @@ N/A
     * Express
     * Express-handlebars
     * Express-session
+    * Express-validator
+    * Generate-unique-id
     * Multer
     * Mysql2
     * Nodemon
     * Sequelize
+    * Uploader
 * Framework:
     * Bootstraps
 
 ## Demos
 
 Links below provide a functionality of webpage.
+
+### Heroku
+
+[Canine Critique](https://pet-roasting-app.herokuapp.com/)
+
+### Screenshots
+
+![Image showing functionality of the Homepage](public/assets/images/Demo_Screenshots/Pet_Roasting_App_Homepage.png)
+
+![Image showing functionality of the Homepage](public/assets/images/Demo_Screenshots/Pet_Roasting_App_Homepage2.png)
+
+![Image showing functionality of the Homepage](public/assets/images/Demo_Screenshots/Pet_Roasting_App_Homepage3.png)
+
+![Image showing functionality of the Sign Up Page](public/assets/images/Demo_Screenshots/Pet_Roasting_App_Sign_Up.png)
+
+![Image showing functionality of the Sign In Page](public/assets/images/Demo_Screenshots/Pet_Roasting_App_Sign_In.png)
+
+![Image showing functionality of the Dashboard](public/assets/images/Demo_Screenshots/Pet_Roasting_App_Dashboard.png)
+
+![Image showing functionality of the Post Page](public/assets/images/Demo_Screenshots/Pet_Roasting_App_Post.png)
 
 ## Credits
 
